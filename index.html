@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Backbone.js CRUD</title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript" src="js/underscore-1.6.0.min.js"></script>
+        <script type="text/javascript" src="js/backbone-1.1.2.min.js"></script>
+
+        <script type="text/template" id="contact-row">
+            <td><%= firstName %></td>
+            <td><%= lastName %></td>
+            <td><%= phone %></td>
+            <td><%= email %></td>
+        </script>
+        <script type="text/template" id="contact-editor">
+            <form>
+                <label for="firstName">First name</label>
+                <input id="firstName" name="firstName" type="text" value="<%= firstName %>"/>
+
+                <label for="lastName">Last name</label>
+                <input id="lastName" name="lastName" type="text" value="<%= lastName %>"/><br />
+
+                <label for="phone">Phone number</label>
+                <input id="phone" name="phone" type="text" value="<%= phone %>"/>
+
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="text" value="<%= email %>"/><br />
+
+                <input id="submit" type="submit" value="Save" />
+                <input id="cancel" type="reset" value="Cancel" />
+            </form>
+        </script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div id="contacts">
+                <table cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>First name</th>
+                            <th>Last name</th>
+                            <th>Phone number</th>
+                            <th>Email address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- ContactList view -->
+                    </tbody>
+                </table>
+                <button id="edit">Edit</button>
+                <button id="delete">Delete</button>
+                <button id="new">New</button>
+            </div>
+
+            <hr />
+
+            <div id="editor-wrapper">
+                <!-- EditView view -->
+            </div>
+        </div>
+    </body>
+</html>
